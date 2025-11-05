@@ -7,13 +7,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary: #0078ff;
-      --bg-light: #f5f7fa;
-      --bg-dark: #1c1c1e;
-      --text-light: #333;
-      --text-dark: #eee;
-      --card-light: #fff;
-      --card-dark: #2c2c2e;
+      --accent: #00ADB5;
+      --bg-light: #f7f7f7;
+      --bg-dark: #121212;
+      --text-light: #222;
+      --text-dark: #eaeaea;
+      --card-light: #ffffff;
+      --card-dark: #1e1e1e;
+      --shadow-light: rgba(0, 0, 0, 0.1);
+      --shadow-dark: rgba(255, 255, 255, 0.05);
     }
 
     * {
@@ -21,7 +23,7 @@
       padding: 0;
       box-sizing: border-box;
       font-family: 'Poppins', sans-serif;
-      transition: background 0.3s, color 0.3s;
+      transition: background 0.3s ease, color 0.3s ease;
     }
 
     body {
@@ -43,29 +45,29 @@
     .container {
       background: var(--card-light);
       padding: 40px;
-      border-radius: 20px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      border-radius: 16px;
+      box-shadow: 0 8px 20px var(--shadow-light);
       max-width: 900px;
       width: 100%;
       text-align: center;
-      animation: fadeIn 1.5s ease-in-out;
+      animation: fadeIn 1.2s ease-in-out;
     }
 
     .dark-mode .container {
       background: var(--card-dark);
-      box-shadow: 0 10px 25px rgba(255, 255, 255, 0.05);
+      box-shadow: 0 8px 20px var(--shadow-dark);
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(30px); }
+      from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
 
     .theme-toggle {
       position: absolute;
-      top: 25px;
+      top: 20px;
       right: 25px;
-      background: var(--primary);
+      background: var(--accent);
       color: white;
       border: none;
       border-radius: 25px;
@@ -76,15 +78,15 @@
     }
 
     .theme-toggle:hover {
-      background: #005fcc;
+      background: #028a91;
     }
 
     .profile-img {
-      width: 160px;
-      height: 160px;
+      width: 150px;
+      height: 150px;
       border-radius: 50%;
       object-fit: cover;
-      border: 5px solid var(--primary);
+      border: 4px solid var(--accent);
       margin-bottom: 15px;
       animation: float 3s ease-in-out infinite;
     }
@@ -95,15 +97,15 @@
     }
 
     h1 {
-      font-size: 2.3rem;
-      color: var(--primary);
-      margin-bottom: 8px;
+      font-size: 2.2rem;
+      color: var(--accent);
+      margin-bottom: 6px;
     }
 
     h2 {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       font-weight: 500;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
       color: inherit;
     }
 
@@ -113,7 +115,7 @@
     }
 
     .section h3 {
-      color: var(--primary);
+      color: var(--accent);
       font-size: 1.2rem;
       margin-bottom: 10px;
     }
@@ -129,20 +131,20 @@
     }
 
     .tag {
-      background: var(--primary);
+      background: var(--accent);
       color: white;
       padding: 6px 14px;
-      border-radius: 25px;
+      border-radius: 20px;
       font-size: 0.9rem;
       transition: background 0.3s;
     }
 
     .tag:hover {
-      background: #005fcc;
+      background: #028a91;
     }
 
     .links a {
-      color: var(--primary);
+      color: var(--accent);
       text-decoration: none;
       font-weight: 500;
       transition: color 0.3s;
@@ -153,11 +155,11 @@
     }
 
     .resume-btn {
-      background: var(--primary);
+      background: var(--accent);
       color: white;
       border: none;
       border-radius: 25px;
-      padding: 10px 20px;
+      padding: 10px 22px;
       font-size: 1rem;
       font-weight: 500;
       cursor: pointer;
@@ -166,13 +168,14 @@
     }
 
     .resume-btn:hover {
-      background: #005fcc;
+      background: #028a91;
     }
 
     footer {
       margin-top: 25px;
       font-size: 0.9rem;
       opacity: 0.8;
+      text-align: center;
     }
 
     @media (max-width: 600px) {
@@ -187,14 +190,16 @@
 </head>
 <body>
   <button class="theme-toggle" onclick="toggleTheme()">🌙 Dark Mode</button>
+
   <div class="container">
     <img src="profile.jpg" alt="Yukti Verma" class="profile-img">
+
     <h1>Yukti Verma</h1>
     <h2>MCA (Hons) Cyber Security | Web Developer | Digital Marketer</h2>
 
     <div class="section">
       <h3>📍 About Me</h3>
-      <p>I'm from <strong>Ludhiana, Punjab</strong>. A passionate learner currently pursuing MCA (Hons) in Cyber Security from <strong>LPU, Phagwara</strong>. I enjoy developing user-friendly websites and exploring creative content through digital marketing.</p>
+      <p>I'm from <strong>Ludhiana, Punjab</strong>. A dedicated learner currently pursuing MCA (Hons) in Cyber Security from <strong>LPU, Phagwara</strong>. I specialize in building responsive websites and exploring digital marketing techniques to grow online presence organically.</p>
     </div>
 
     <div class="section">
@@ -225,7 +230,7 @@
         <span class="tag">YouTube Channel Creation</span>
         <span class="tag">Content Analytics</span>
       </div>
-      <p style="margin-top:10px;">Created and managed a YouTube channel focused on storytelling and horror content — achieved 1000+ organic views per short consistently from the beginning.</p>
+      <p style="margin-top:10px;">Created and managed a YouTube channel focused on storytelling and horror content — achieved consistent 1000+ organic views per short since the beginning.</p>
     </div>
 
     <div class="section">
@@ -249,7 +254,7 @@
     </div>
 
     <footer>
-      <p>✨ Thank you for visiting my portfolio — I appreciate your time and interest!</p>
+      <p>Thank you for visiting my portfolio — I appreciate your time and interest.</p>
       <p>© 2025 Yukti Verma | All Rights Reserved</p>
     </footer>
   </div>
@@ -258,11 +263,9 @@
     function toggleTheme() {
       document.body.classList.toggle('dark-mode');
       const btn = document.querySelector('.theme-toggle');
-      if (document.body.classList.contains('dark-mode')) {
-        btn.textContent = '☀️ Light Mode';
-      } else {
-        btn.textContent = '🌙 Dark Mode';
-      }
+      btn.textContent = document.body.classList.contains('dark-mode')
+        ? '☀️ Light Mode'
+        : '🌙 Dark Mode';
     }
   </script>
 </body>
