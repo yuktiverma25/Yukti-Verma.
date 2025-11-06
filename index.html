@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Yukti Verma | Portfolio</title>
   <style>
-    /* General Styles */
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -32,12 +31,28 @@
 
     header {
       text-align: center;
-      padding: 60px 20px 20px;
+      padding: 50px 20px 20px;
+    }
+
+    .profile-img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid var(--accent);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      margin-bottom: 15px;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
     }
 
     header h1 {
       font-size: 2.2rem;
-      margin-bottom: 0.4em;
+      margin-bottom: 0.3em;
     }
 
     header p {
@@ -106,6 +121,7 @@
 </head>
 <body>
   <header>
+    <img src="profile.jpg" alt="Yukti Verma" class="profile-img" />
     <h1>Yukti Verma</h1>
     <p>Aspiring Web Developer | MCA (Hons.) Student</p>
   </header>
@@ -116,7 +132,7 @@
 
     <p>I hold a <strong>BCA</strong> degree from <strong>GNIMT</strong> under PTU with an overall <strong>8.67 SGPA</strong>. During my studies, I developed strong fundamentals in computer applications, programming, and analytical problem-solving that I now apply to real-world projects.</p>
 
-    <p>Outside academics, I enjoy exploring <strong>web development</strong> and <strong>digital marketing</strong>. I also create short, engaging content that has organically reached a wide audience — an experience that improved my understanding of audience engagement and creative strategy.</p>
+    <p>Outside academics, I enjoy exploring <strong>web development</strong> and <strong>digital marketing</strong>. I also create short, engaging content that has organically reached a wide audience — an experience that enhanced my creative communication and audience engagement skills.</p>
   </div>
 
   <div class="section">
